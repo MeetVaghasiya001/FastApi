@@ -164,7 +164,7 @@ def delete_user(user_id: int):
         conn.commit()
         conn.close()
         return {
-            'message':'User delete successfully'
+            'message':f'User {user_id} delete successfully'
         }
 
     raise HTTPException(status_code=404, detail="User not found")
